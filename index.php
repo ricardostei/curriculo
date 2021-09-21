@@ -3,6 +3,8 @@
 include("connection.php");
 session_start();
 
+echo "sadsdasda";
+
  if(empty($_SESSION))
     header('Location: login.php');   
 
