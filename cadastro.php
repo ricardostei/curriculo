@@ -34,7 +34,30 @@
                 Olá, <?= $_SESSION["usuario"]?>! 
                     <div class="mt-5 mb-3 clearfix">                    
                         <h2 class="pull-left">Currículos</h2>
-                        <a href="create.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Add Novo</a>
+                        <button type="button" class="btn btn-success pull-right" data-toggle="modal" data-target="#modalcadastro">
+                         Add New
+                        </button>
+
+<!-- Modal -->
+<div class="modal fade" id="modalcadastro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cadastro</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Salvar mudanças</button>
+      </div>
+    </div>
+  </div>
+</div>
                     </div>
                     <?php
                     // Include config file
