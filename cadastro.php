@@ -35,30 +35,29 @@
                     <div class="mt-5 mb-3 clearfix">                    
                         <h2 class="pull-left">Currículos</h2>
                         <button type="button" class="btn btn-success pull-right" data-toggle="modal" data-target="#modalcadastro">
-                         Add New
+                         Add Novo
                         </button>
-
-<!-- Modal -->
-<div class="modal fade" id="modalcadastro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Cadastro</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary">Salvar mudanças</button>
-      </div>
-    </div>
-  </div>
-</div>
-                    </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modalcadastro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Cadastro</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                        <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
                     <?php
                     // Include config file
                     include("connection.php");
@@ -93,7 +92,7 @@
                                         echo "<td>" . utf8_encode($row['ferramentas']) . "</td>";
                                         echo "<td>";
                                             echo '<a href="index.php?id='. $row['id'] .'" class="mr-3" title="Ver Currículo" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
-                                            echo '<a href="update.php?id='. $row['id'] .'" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
+                                            echo '<a class="mr-3" title="Atualizar Registro" data-toggle="modal" data-target="#modalcadastro"><span class="fa fa-pencil"></span></a>';
                                             echo '<a href="delete.php?id='. $row['id'] .'" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
                                         echo "</td>";
                                     echo "</tr>";
